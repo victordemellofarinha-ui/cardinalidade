@@ -1,0 +1,8 @@
+//comando para criar tabela
+CREATE TABLE nome_da_tabela();
+
+//Comando para ler TODOS os dados da tabela
+SELECT * FROM nome_da_tabela;
+
+//Comando para gravar dados
+INSERT INTO nome_da_tabela(atributos_da_tabela) VALUES(valores_da_tabela);
