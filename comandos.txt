@@ -1,3 +1,4 @@
+
 //comando para criar tabela
 CREATE TABLE nome_da_tabela();
 
@@ -19,3 +20,21 @@ ADD COLUMN nome_da_coluna VARCHAR(limite_de_caracteres_que_você_quer);
 //Apagar uma coluna na tabela
 ALTER TABLE detalhes_usuarios
 DROP COLUMN nome_da_coluna;
+
+//Juntar duas tabelas
+Left join   //pega as informações da tabela da esquerda e o meio
+Right join   //pega as informações da tabela da direita e o meio 
+Full join   //pega as informações das duas tabelas e junta em uma 
+Join ou innerjoin  //pega as informações do meio da tabela
+
+-------------------------------------------------------------------
+
+SELECT 
+	coluna1, coluna2 //pode colocar quantas quiser. Isto faz para que apenas estas colunas apareçam quando executa
+FROM
+	Tabela1 //a primeira tabela é a da esquerda
+JOIN
+    tabela2
+ON //é como se fosse um ligar, você liga tal coluna a outra
+    Tabela1.coluna_que_você_quiser = Tabela2.coluna_que_você_quiser
+	
