@@ -37,4 +37,29 @@ JOIN
     tabela2
 ON //é como se fosse um ligar, você liga tal coluna a outra
     Tabela1.coluna_que_você_quiser = Tabela2.coluna_que_você_quiser
-	
+-----------------------------------------------------------------------------
+
+create table produtos(
+id serial primary key,
+item VARCHAR(100) not null,
+qtd_estoque int, 
+custo_unitario DECIMAL(10, 2)
+)
+
+insert into produtos(item, qtd_estoque, custo_unitario)
+VALUES
+('LCI', 8, 1000),
+('LCA', 6, 1000),
+('MXRF11', 50, 10.50),
+('CPFF11', 40, 8.90),
+('Tesouro Selic', 3, 1200),
+('Tesouro IPCA', 2, 1500),
+('PETR4', 20, 38.50),
+('VALE3', 15, 65),
+('ITUB4', 25, 32)
+
+SELECT 
+id,
+qtd_estoque,
+custo_unitario,
+(qtd_estoque * custo_unitario) as valor_total_estoque from produtos
